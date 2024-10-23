@@ -1,10 +1,33 @@
-public class dog {
+public class Dog {
 
-    public static void main(String[] args) {
-        String name;
-        String breed;
-        int age;
-        String species;
+    static String species = "Canine";
+    public String name;
+    public String breed;
+    protected int age;
+
+    public Dog(String name, String breed, int age){
+        this.name = name;
+        this.breed = breed;
+        this.age = age;
     }
 
+    public Dog(){
+        name = "Unknown";
+        breed = "Unknown";
+        age = 0;
+    }
+
+    public String getBreed(){
+        return breed;
+    }
+
+
+    protected void displayAnimalInfo(){
+        System.out.println(name + ", " + breed + ", " + age);
+    }
+
+
+    public static void displaySpecies(){
+        System.out.println(species);
+    }
 }
